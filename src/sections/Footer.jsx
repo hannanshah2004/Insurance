@@ -2,37 +2,36 @@ import { socials } from "../constants/index.jsx";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="container py-10">
-        <div className="flex w-full max-md:flex-col">
-          <div className="small-compact flex flex-1 flex-wrap items-center justify-center gap-5">
-            <p className="opacity-70">Copyright, JS Mastery</p>
+    <footer className="bg-indigo-900 text-white py-12">
+      <div className="container">
+        <div className="flex flex-col items-center mb-8">
+          <div className="flex flex-wrap justify-center gap-8">
+            <a href="#" className="hover:text-yellow-300 transition duration-300">Privacy Policy</a>
+            <a href="#" className="hover:text-yellow-300 transition duration-300">Terms of Service</a>
+            <a href="#" className="hover:text-yellow-300 transition duration-300">Contact Us</a>
           </div>
-          <div className="flex items-center justify-center sm:ml-auto">
-            <p className="legal-after relative mr-9 text-p5 transition-all duration-500 hover:text-p1">
-              Privacy Policy
-            </p>
-            <p className="text-p5 transition-all duration-500 hover:text-p1">
-              Terms of Use
-            </p>
-          </div>
-
-          <ul className="flex flex-1 justify-center gap-3 max-md:mt-10 md:justify-end">
-            {socials.map(({ id, url, icon, title }) => (
-              <li key={id}>
-                <a href={url} className="social-icon">
-                  <img
-                    src={icon}
-                    alt={title}
-                    className="size-1/3 object-contain"
-                  />
-                </a>
-              </li>
+        </div>
+        <div className="mt-8 pt-8 border-t border-indigo-800 flex flex-col md:flex-row items-center justify-between">
+          <p className="text-sm text-gray-400 mb-4 md:mb-0">
+            © {new Date().getFullYear()} AHS Insurance. All rights reserved.
+          </p>
+          <div className="flex gap-6">
+            {socials.map((social) => (
+              <a
+                key={social.id}
+                href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-yellow-300 transition duration-300"
+              >
+                <img src={social.icon} alt={social.name} className="h-6 w-6 filter invert" />
+              </a>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </footer>
   );
 };
+
 export default Footer;
