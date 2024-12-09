@@ -16,9 +16,6 @@ const Hero = () => {
             <p className="max-w-440 mb-14 body-1 max-md:mb-10 ml-10 text-gray-200">
               Please call 201-918-7570 for personalized, comprehensive, and reliable insurance solutions tailored to the needs of Jersey City residents.
             </p>
-            <Button className="bg-yellow-400 hover:bg-yellow-500 text-indigo-900 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
-              Get a Quote Now
-            </Button>
           </div>
 
           <div className="absolute -top-32 left-[calc(50%-340px)] w-[1230px] pointer-events-none hero-img_res">
